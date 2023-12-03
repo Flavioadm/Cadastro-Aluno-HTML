@@ -90,6 +90,17 @@ body{
 .botaoformulario{
     font-size: 2.5rem;
     text-align: left;
-    margin-top: 0%;
+    margin-top: 1%;
     margin-right: 20%;
+}
+
+.botaoformulario_completo{
+    font-size: 2.5rem;
+    text-align: left;
+    margin-top: 2%;
+    margin-right: 83%;
+}
+
+.textoForulario{
+    padding-right: 2%;
 }
