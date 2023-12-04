@@ -6,6 +6,80 @@
     <link rel = "stylesheet" href="styles.css">
     <title class="icones_pequenos">Cadastrar Aluno</title>
 </head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: linear-gradient(to left, rgb(20, 147, 220), rgb(17, 54, 71));
+    }
+    .box{
+        color: white;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 1rem;
+        border-radius: 15px;
+        width: 20%;
+    }
+    fieldset{
+        border: 3px solid dodgerblue;
+    }
+    legend{
+        border: 1px solid dodgerblue;
+        padding: 10px;
+        text-align: center;
+        background-color: dodgerblue;
+        border-radius: 8px;
+    }
+    .inputBox{
+        position: relative;
+    }
+    .inputUser{
+        background: none;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        color: white;
+        font-size: 15px;
+        width: 100%;
+        letter-spacing: 2px;
+    }
+    .labelInput{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        pointer-events: none;
+        transition: .5s;
+    }
+    .inputUser:focus ~ .labelInput,
+    .inputUser:valid ~ .labelInput{
+        top: -20px;
+        font-size: 12px;
+        color: dodgerblue;
+    }
+    #data_nascimento{
+        border: none;
+        padding: 8px;
+        border-radius: 10px;
+        outline: none;
+        font-size: 15px;
+    }
+    #submit{
+        background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+        width: 100%;
+        border: none;
+        padding: 15px;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    #submit:hover{
+        background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
+    }
+</style>
+
 <body>
     <ul>
         <li class="icones_pequenos">
@@ -25,15 +99,42 @@
 </ul>       
     <h1 class="principal">Cadastrar Aluno</h1>
 
-    <form class="textoForulario" method="POST" action="CadastroAluno.php">
-        <label>Nome do Aluno</label>
-        <input class="formulario" type="text" name="CadastroAluno" placeholder="Digite o nome do Aluno">
-        <label>Data de nascimento</label>
-        <input class="formulario" type="text" name="dataNascimento" placeholder="Digite a data de nascimento">
-        <label>Serie e turma</label>
-        <input class="formulario" type="text" name="serieTurma" placeholder="Digite serie e turma"><br>
-        <input class="botaoformulario_completo" type="submit" value="   Enviar   ">
-    </form> 
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Cadastro de Aluno</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome completo</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="turma" id="turma" class="inputUser" required>
+                    <label for="email" class="labelInput">Turma</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelInput">Telefone</label>
+                </div><br>
+                <p>Sexo:</p><br>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <br>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                <br>
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for="outro">Outro</label>
+                <br><br>
+                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                <input type="date" name="data_nascimento" id="data_nascimento" required>
+                <br><br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
     
 </body>
 </html>

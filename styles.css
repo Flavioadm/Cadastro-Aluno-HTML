@@ -10,8 +10,7 @@
     padding: 0%;
     border: 0%;
     text-decoration: none;
-    
-    
+ 
 }
 
 body{
@@ -42,17 +41,14 @@ body{
     padding-top: 0%;
 }
 
-.container{
-
-    height: auto;
-
+.container__botao__grande{
+    margin: auto;
+    text-align: center;
 }
 
 .container__botao__grande:hover{
 
     background-color: var(--cor-de-fundo-selecionado);
-
-    
 }
 
 .container__botao__pequeno{
@@ -68,10 +64,12 @@ body{
 .footer{
     background-color: var(--cor-de-fundo-selecionado);
     color: var(--cor-da-letra-principal);
-    font-size: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
     position: fixed;
     bottom: 0;
     width: 100%;
+    padding: 1% 0% 1% 0%;
 }
 
 .creditos{
