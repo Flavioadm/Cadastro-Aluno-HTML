@@ -1,9 +1,9 @@
 <?php
 // Dados de conexão com o banco de dados MySQL
-$hostname = 'db4free.net';
-$username = 'flaviolucas@localhost';
-$password = '3g_@@TaZVbU5Knv';
-$database = 'cadastrodealunos';
+$hostname = '193.203.175.53';
+$username = 'u294807456_flaviolucas';
+$password = '@BDaluno2023';
+$database = 'u294807456_cadAluno';
 
 // Estabelecer a conexão com o banco de dados usando o PDO
 try {
@@ -13,3 +13,17 @@ try {
 } catch(PDOException $e) {
     echo "Erro na conexão com o banco de dados: " . $e->getMessage();
 }
+
+// Realizar uma consulta no banco de dados
+try {
+    $stmt = $pdo->query("SELECT * FROM nomeAluno");
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        echo "ID: " . $row['id'] . ", Nome: " . $row['nome'] . ", Data de nascimento: " . $row['data_nacimsnto'] . ", Tuma: " . $row['turma'] ; "<br>";
+    }
+} catch(PDOException $e) {
+    echo "Erro na consulta: " . $e->getMessage();
+}
+
+// Fechar a conexão com o banco de dados
+$pdo = null;
+?>

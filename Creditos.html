@@ -6,9 +6,132 @@
     <link rel = "stylesheet" href="styles.css">
     <title>Equipe</title>
 </head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: linear-gradient(to left, rgb(20, 147, 220), rgb(17, 54, 71));
+    }
+    .box{
+        color: white;
+        position: fixed;
+        top: 700px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 1.5rem;
+        border-radius: 15px;
+        width: 1100px;
+        
+    }
+    fieldset{
+        border: 3px solid dodgerblue;
+        border-radius: 15px;
+    }
+    legend{
+        border: 1px solid dodgerblue;
+        padding: 10px;
+        text-align: center;
+        background-color: dodgerblue;
+        border-radius: 15px;
+    }
+    .inputBox{
+        position: relative;
+    }
+    .inputUser{
+        background: none;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        color: white;
+        font-size: 15px;
+        width: 100%;
+        letter-spacing: 2px;
+    }
+    .labelInput{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        pointer-events: none;
+        transition: .5s;
+    }
+    .inputUser:focus ~ .labelInput,
+    .inputUser:valid ~ .labelInput{
+        top: -20px;
+        font-size: 12px;
+        color: dodgerblue;
+    }
+    #data_nascimento{
+        border: none;
+        padding: 8px;
+        border-radius: 10px;
+        outline: none;
+        font-size: 15px;
+    }
+    #submit{
+        background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+        width: 100%;
+        border: none;
+        padding: 15px;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    #submit:hover{
+        background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
+    }
+    .creditos{
+        padding-left: 40px;
+        font-size: 26px;
+    }
+</style>
 <body>
-    <h1 class="creditos">Equipe:</h1>
-    <p></p>
-    
+    <ul>
+        <li class="icones_pequenos">
+            <a class="container__botao__pequeno" href="/index.html">
+                <img src="Icones/Home 150X150.png">
+            </a>
+            <a class="container__botao__pequeno" href="/Cadastrar.html">
+                <img src="Icones/Cadastrar 150X150.png">
+            </a>
+            <a class="container__botao__pequeno" href="/Consultar.html">
+                <img src="Icones/Consultar 150X150.png">
+            </a>
+            <a class="container__botao__pequeno" href="/Excluir.html">
+                <img src="Icones/Excluir 150X150.png">
+            </a>
+        <li>
+    </ul>   
+    <div class="box">
+            <fieldset>
+                <legend><b>Créditos</b></legend>
+                <br><br>
+                <div>
+                    <br>
+                    <h5 class="creditos">BRUNO SILVA FREIRE DE CARVALHO - 202108164933</h5>
+                </div>
+                <br><br>
+                <div>
+                    <h5 class="creditos">FLÁVIO CASTRO LUCAS - 202107381809</h5>
+                </div>
+                <br><br>
+                <div>
+                    <h5 class="creditos">RAFAEL FIGLIUOLO NASCIMENTO - 202108700037</h5>
+                </div>
+                <br><br>
+                <div>
+                    <h5 class="creditos">TARCIANA ARQUINO DA LUZ - 202202139661</h5>
+                </div>
+                <br><br>
+                <div>
+                    <h5 class="creditos">WALLACE SANTOS TOSTA - 202202827053</h5>
+                </div>
+                <br><br>
+                <div>
+                    <h5 class="creditos">YURI ALVES FRANÇA DE ALMEIDA - 202212039091</h5>
+                </div>
+                <br><br><br>
+            </fieldset>
+    </div>
 </body>
 </html>
