@@ -3,7 +3,7 @@
 $hostname = '193.203.175.53';
 $username = 'u294807456_flaviolucas';
 $password = '@BDaluno2023';
-$database = 'u294807456_cadAluno';
+$database = 'u294807456_cad_aluno';
 
 // Estabelecer a conexão com o banco de dados usando o PDO
 try {
@@ -16,7 +16,7 @@ try {
 
 // Realizar uma consulta no banco de dados
 try {
-    $stmt = $pdo->query("SELECT * FROM nomeAluno");
+    $stmt = $pdo->query("SELECT * FROM nome_aluno");
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         echo "ID: " . $row['id'] . ", Nome: " . $row['nome'] . ", Data de nascimento: " . $row['data_nacimsnto'] . ", Tuma: " . $row['turma'] ; "<br>";
     }
