@@ -25,7 +25,7 @@ body{
 .principal{
 
     font-family: 'Courier New', Courier, monospace;
-    font-size: 6rem;
+    font-size: 4rem;
     text-align: center;
 
 }
@@ -38,7 +38,7 @@ body{
 
 .icones_pequenos{
     text-align: center;
-    padding-top: 0%;
+    padding: 1% 1% 1% 1%;
 }
 
 .container__botao__grande{
@@ -78,27 +78,16 @@ body{
 
 }
 
-.formulario{
-    font-size: 2.5rem;
+.box__tag{
+    color: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0.5, 0.6);
+    padding: 19px;
+    border-radius: 15px;
+    width: 70%;
     text-align: center;
-    margin-top: 3%;
-
-}
-
-.botaoformulario{
-    font-size: 2.5rem;
-    text-align: left;
-    margin-top: 1%;
-    margin-right: 20%;
-}
-
-.botaoformulario_completo{
-    font-size: 2.5rem;
-    text-align: left;
-    margin-top: 2%;
-    margin-right: 83%;
-}
-
-.textoForulario{
-    padding-right: 2%;
+    font-size: 26px;
 }

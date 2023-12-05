@@ -14,13 +14,13 @@
     .box{
         color: white;
         position: absolute;
-        top: 50%;
+        top: 700px;
         left: 50%;
         transform: translate(-50%,-50%);
         background-color: rgba(0, 0, 0, 0.6);
         padding: 15px;
         border-radius: 15px;
-        width: 20%;
+        width: 50%;
     }
     legend{
         border: 1px solid dodgerblue;
@@ -38,7 +38,7 @@
         border-bottom: 1px solid white;
         outline: none;
         color: white;
-        font-size: 15px;
+        font-size: 32px;
         width: 100%;
         letter-spacing: 2px;
     }
@@ -51,8 +51,8 @@
     }
     .inputUser:focus ~ .labelInput,
     .inputUser:valid ~ .labelInput{
-        top: -20px;
-        font-size: 12px;
+        top: -30px;
+        font-size: 16px;
         color: dodgerblue;
     }
     #submit{
@@ -87,18 +87,31 @@
         </a>
     <li>
     </ul>   
-    <h1 class="formulario">Cadastrar Turma</h1>
+    <h1 class="icones_pequenos">Cadastrar Turma</h1>
     <div class="box">
-        <form action="">
+        <form action="processar.php" method="post">
             <fieldset>
                 <legend><b>Cadastro de truma</b></legend>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
-                    <label for="nome" class="labelInput">Nome da turma</label>
+                    <input type="text" name="serie" id="serie" class="inputUser" required>
+                    <label for="serie" class="labelInput">Qual a série da turma</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="letra" id="letra" class="inputUser" text-transform="uppercase" required>
+                    <label for="letra" class="labelInput">Letra da turma</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <select class="box__tag" name="turno" id="turno"required>
+                        <option value="">Turno</option>
+                        <option value="Matutino">Matutino</option>
+                        <option value="Vespertino">Vespertino</option>
+                        <option value="Notruno">Noturno</option>
                 </div>
                 <br>
-                <input type="submit" name="submit" id="submit">
+                <input  type="submit" name="submit" id="submit">
             </fieldset>
         </form>
     </div>
