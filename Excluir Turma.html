@@ -86,10 +86,16 @@
             <img src="Icones/Excluir 150X150.png">
         </a>
     <li>
-    </ul>   
+    <script>
+        function confirmarExclusao() {
+            return confirm("Tem certeza de que deseja excluir esta turma?");
+        }
+    </script>
+</ul>   
     <h1 class="icones_pequenos">Excluir Turma</h1>
     <div class="box">
-        <form action="">
+        <form  action="excluir_turma.php" method="post" onsubmit="return confirmarExclusao()">
+            <fieldset>
             <fieldset>
                 <legend><b>Exclusão de truma</b></legend>
                 <br><br>

@@ -73,23 +73,23 @@
 <body>
     <ul>
         <li class="icones_pequenos">
-        <a class="container__botao__pequeno" href="/index.html">
-            <img src="Icones/Home 150X150.png">
-        </a>
-        <a class="container__botao__pequeno" href="/Cadastrar.html">
-            <img src="Icones/Cadastrar 150X150.png">
-        </a>
-        <a class="container__botao__pequeno" href="/Consultar.html">
-            <img src="Icones/Consultar 150X150.png">
-        </a>
-        <a class="container__botao__pequeno" href="/Excluir.html">
-            <img src="Icones/Excluir 150X150.png">
-        </a>
-    <li>
+            <a class="container__botao__pequeno" href="/index.html">
+                <img src="Icones/Home 150X150.png">
+            </a>
+            <a class="container__botao__pequeno" href="/Cadastrar.html">
+                <img src="Icones/Cadastrar 150X150.png">
+            </a>
+            <a class="container__botao__pequeno" href="/Consultar.html">
+                <img src="Icones/Consultar 150X150.png">
+            </a>
+            <a class="container__botao__pequeno" href="/Excluir.html">
+                <img src="Icones/Excluir 150X150.png">
+            </a>
+        </li>
     </ul>   
     <h1 class="icones_pequenos">Consultar Turma</h1>
     <div class="box">
-        <form action="">
+        <form action="consultar_turma.php" method="post">
             <fieldset>
                 <legend><b>Consulta de turma</b></legend>
                 <br><br>
@@ -98,7 +98,7 @@
                     <label for="turma" class="labelInput">Nome da turma</label>
                 </div>
                 <br>
-                <input type="submit" name="submit" id="submit">
+                <input type="submit" name="submit" id="submit" value="Consultar">
             </fieldset>
         </form>
     </div>

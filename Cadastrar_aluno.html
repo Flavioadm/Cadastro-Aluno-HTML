@@ -100,18 +100,27 @@
         <h1 class="principal">Cadastrar Aluno</h1>
         <br>
     <div class="box">
-        <form action="">
+        <form action="Cadastra_aluno.php" method="post">
             <fieldset>
-                <legend class="no"><b>Cadastro de Aluno</b></legend>
+                <legend><b>Cadastro de Aluno</b></legend>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
-                    <label for="nome" class="labelInput">Nome completo</label>
+                    <input type="text" name="nome_aluno" id="nome_aluno" class="inputUser" required>
+                    <label for="nome_aluno" class="labelInput">Nome completo</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="turma" id="turma" class="inputUser" required>
-                    <label for="email" class="labelInput">Turma</label>
+                    <form action="processa_selecao.php" method="post">
+                        <label  for="cadastro_turma">Turma:</label>
+                        <select name="cadastro_turma" id="cadastro_turma" required>
+                            <option value="">Selecione...</option>
+                            <?php
+                            foreach ($resultados as $turma) {
+                                echo "<option value='{$cadastro_turma['id']}'>{$cadastro_turma['serie']} - {$cadastro_turma['turma']} ({cadastro_turma['turno']})</option>";
+                            }
+                            ?>
+                        </select>
+                    </form>
                 </div>
                 <br>
                 <label class="inputBox" for="data_nascimento"><b>Data de Nascimento:</b></label>

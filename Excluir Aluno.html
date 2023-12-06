@@ -89,11 +89,16 @@
         <a class="container__botao__pequeno" href="/Excluir.html">
             <img src="Icones/Excluir 150X150.png">
         </a>
+        <script>
+            function confirmarExclusao() {
+                return confirm("Tem certeza de que deseja excluir este aluno?");
+            }
+        </script>
     <li>
     </ul>   
     <h1 class="icones_pequenos">Excluir Aluno</h1>
     <div class="box">
-        <form action="">
+        <form action="excluir_aluno.php" method="post" onsubmit="return confirmarExclusao()">
             <fieldset>
                 <legend><b>Exclusão de Aluno</b></legend>
                 <br><br>
